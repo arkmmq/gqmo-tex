@@ -47,7 +47,8 @@
 \rfoot{\itshape Time: \@time}
 \renewcommand{\maketitle}
 	{\noindent
-	\includegraphics[height=100pt]{qmologo.png}
+	\def\svgwidth{160pt}
+	\input{qmologo.pdf_tex}
 	\begin{flushright}
 		\Large\scshape\framebox{\@level}\ifx\@day\@empty\else\smallskip\\
 		\framebox{Day \@day}\fi
