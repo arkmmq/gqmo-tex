@@ -47,7 +47,7 @@
 \rfoot{\itshape Time: \@time}
 \renewcommand{\maketitle}
 	{\noindent
-	\def\svgwidth{160pt}
+	\def\svgwidth{145pt}
 	\input{qmologo.pdf_tex}
 	\begin{flushright}
 		\Large\scshape\framebox{\@level}\ifx\@day\@empty\else\smallskip\\
