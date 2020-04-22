@@ -44,7 +44,7 @@
 \newcommand{\qmoday}[1]{\gdef\@qmoday{#1}}
 \newcommand{\qmotime}[1]{\gdef\@qmotime{#1}}
 \lfoot{\itshape\@date}
-\rfoot{\itshape \@qmotime}
+\rfoot{\itshape\@qmotime}
 \renewcommand{\maketitle}
 	{\noindent
 	\def\svgwidth{145pt}
