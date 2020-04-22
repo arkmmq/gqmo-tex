@@ -39,19 +39,19 @@
 ]{problem}{Problem}
 
 \makeatletter
-\let\@day\@empty
+\let\@qmoday\@empty
 \newcommand{\level}[1]{\gdef\@level{#1}}
-\renewcommand{\day}[1]{\gdef\@day{#1}}
-\renewcommand{\time}[1]{\gdef\@time{#1}}
+\newcommand{\qmoday}[1]{\gdef\@qmoday{#1}}
+\newcommand{\qmotime}[1]{\gdef\@qmotime{#1}}
 \lfoot{\itshape\@date}
-\rfoot{\itshape Time: \@time}
+\rfoot{\itshape \@qmotime}
 \renewcommand{\maketitle}
 	{\noindent
 	\def\svgwidth{145pt}
 	\input{qmologo.pdf_tex}
 	\begin{flushright}
 		\Large\scshape\framebox{\@level}\ifx\@day\@empty\else\smallskip\\
-		\framebox{Day \@day}\fi
+		\framebox{\@qmoday}\fi
 	\end{flushright}
 	\ifx\@day\@empty\else\vspace*{-0.2\baselineskip}\fi
 	\rule{\textwidth}{.7pt}
