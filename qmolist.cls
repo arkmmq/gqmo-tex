@@ -54,7 +54,7 @@
 	topline=false,
 	rightline=false,
 	bottomline=false,
-	innerleftmargin=10pt,
+	innerleftmargin=7pt,
 	linewidth=3pt,
 	linecolor=bc
 ]{claim}{Claim}
@@ -62,7 +62,7 @@
 	topline=false,
 	rightline=false,
 	bottomline=false,
-	innerleftmargin=10pt,
+	innerleftmargin=7pt,
 	linewidth=3pt,
 	linecolor=bc
 ]{lemma}{Lemma}
