@@ -1,0 +1,38 @@
+\documentclass{qmolist}
+
+%%% READ THIS CAREFULLY %%%
+
+% make sure you have this file in the same directory as qmolist.cls
+
+% the cls includes several macros you can (and should) use:
+% use \nl if you want to start a new line -- this is extremely important for uniformity
+% you can use \N, \Z, \Q, \R, \C to write sets' names
+% if two parentheses contain fractions, powers etc, use \( ... \), this will format them correctly
+% if the parentheses are not round, you should use \left and \right
+
+% the cls should contain every package you could possibly need, but if you need others tell me on discord
+
+% you can use both tkz-euclide and asymptote for diagrams (they're already included in the cls)
+% but if you use asymptote, you'll need to create a separate asy file and use \asyinclude{file.asy}
+% because inline asymptote won't work inside the solution environment
+
+% for claims and lemmas use
+% \begin{claim}
+%	...
+% \end{claim}
+% and change "claim" with "lemma" if needed
+
+\begin{document}
+\begin{problem}{author's name}
+	% problem statement here
+\end{problem}
+\begin{solution*}
+	% use "solution*" if you're only including one solution
+	% otherwise use "solution" and write as many as you want
+	% if you want to add solutions you should begin a new environment for each solution
+\end{solution*}
+\begin{remark}
+	% you don't necessarily need to include a remark
+	% in case, delete this environment
+\end{remark}
+\end{document}
