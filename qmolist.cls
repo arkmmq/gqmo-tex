@@ -71,6 +71,7 @@
 \makeatletter
 \NewEnviron{problem}[1]
 	{\ifsol\clearpage\fi\stepcounter{problem}
+	\Needspace*{2\baselineskip}
 	\noindent
 	{\large\sffamily\textbf{\textcolor{red}{$\blacksquare$} Problem~\theproblem}\hspace{.8em}{\small(#1)}}
 	\vspace{0.3\baselineskip}\\
