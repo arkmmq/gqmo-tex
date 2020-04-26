@@ -72,35 +72,39 @@
 \NewEnviron{problem}[1]
 	{\ifsol\clearpage\fi\stepcounter{problem}
 	\noindent
-	{\large\sffamily\bfseries\textcolor{red}{$\blacksquare$} Problem~\theproblem}
-	\medskip\\
+	{\large\sffamily\textbf{\textcolor{red}{$\blacksquare$} Problem~\theproblem}\hspace{.8em}{\small(#1)}}
+	\vspace{0.3\baselineskip}\\
 	\BODY
-	\begin{flushright}\itshape Proposed by #1\end{flushright}\bigskip
-	\ifsol\vspace*{-1.1\baselineskip}
-	\rule{\textwidth}{.7pt}\vspace*{1.1\baselineskip}\\ \fi}
+	\par\vspace{1.1\baselineskip}
+	\ifsol
+	\noindent
+	\vspace{-1.7\baselineskip}\\
+	\rule{\textwidth}{.7pt}\vspace{0.9\baselineskip}\\ \fi}
 
 \NewEnviron{solution*}[1]
 	{\ifsol
 	\noindent
-	{\large\sffamily\bfseries\textcolor{red}{\textsection} Solution}
+	{\large\sffamily\textbf{\textcolor{red}{\textsection} Solution}\hspace{.8em}{\small(#1)}}
 	\medskip\\
 	\BODY
-	\begin{flushright}\itshape Solution by #1\end{flushright}
+	\vspace*{\baselineskip}\\
 	\fi}
 
 \NewEnviron{solution}[1]
 	{\ifsol
 	\stepcounter{solution}
 	\noindent
-	{\large\sffamily\bfseries\textcolor{red}{\textsection} Solution~\thesolution}
+	{\large\sffamily\textbf{\textcolor{red}{\textsection} Solution~\thesolution}\hspace{.8em}{\small(#1)}}
 	\medskip\\
 	\BODY
-	\begin{flushright}\itshape Solution by #1\end{flushright}
+	\vspace*{\baselineskip}\\
 	\fi}
 
-\newenvironment{remark}
-	{\noindent
+\NewEnviron{remark}
+	{\ifsol
+	\noindent
 	{\large\sffamily\bfseries\textcolor{red}{\textsection} Remark}
-	\medskip\\ }
-	{}
+	\medskip\\
+	\BODY
+	\fi}
 \makeatletter
