@@ -79,7 +79,7 @@
 	\ifsol
 	\noindent
 	\vspace{-1.7\baselineskip}\\
-	\rule{\textwidth}{.7pt}\vspace{0.9\baselineskip}\\ \fi}
+	\rule{\textwidth}{.7pt}\par\vspace{0.9\baselineskip}\fi}
 
 \NewEnviron{solution*}[1]
 	{\ifsol
@@ -87,21 +87,23 @@
 	{\large\sffamily\textbf{\textcolor{red}{\textsection} Solution}\hspace{.8em}{\small(#1)}}
 	\medskip\\
 	\BODY
-	\vspace*{\baselineskip}\\
+	\par\vspace*{\baselineskip}
 	\fi}
 
 \NewEnviron{solution}[1]
 	{\ifsol
 	\stepcounter{solution}
+	\Needspace*{2\baselineskip}
 	\noindent
 	{\large\sffamily\textbf{\textcolor{red}{\textsection} Solution~\thesolution}\hspace{.8em}{\small(#1)}}
 	\medskip\\
 	\BODY
-	\vspace*{\baselineskip}\\
+	\par\vspace*{\baselineskip}
 	\fi}
 
 \NewEnviron{remark}
 	{\ifsol
+	\Needspace*{2\baselineskip}
 	\noindent
 	{\large\sffamily\bfseries\textcolor{red}{\textsection} Remark}
 	\medskip\\
