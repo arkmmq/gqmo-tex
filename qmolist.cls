@@ -3,7 +3,7 @@
 \LoadClass[11pt,a4paper]{article}
 
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[margin=6em]{geometry}
+\RequirePackage[margin=6em,top=5em]{geometry}
 \RequirePackage{mdframed}
 \RequirePackage{amsthm}
 \RequirePackage{amssymb}
@@ -16,6 +16,7 @@
 \RequirePackage{asymptote}
 \RequirePackage{tkz-euclide}
 \RequirePackage[outline]{contour}
+\RequirePackage{titlesec}
 \RequirePackage{fancyhdr}
 
 \pagestyle{fancy}
@@ -36,7 +37,7 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 
-\newcounter{problem}[section]
+\newcounter{problem}[subsection]
 \newcounter{solution}[problem]
 
 \definecolor{bc}{RGB}{153,153,153}
@@ -67,10 +68,25 @@
 	linecolor=bc
 ]{lemma}{Lemma}
 
+\newcommand{\sectionbreak}{\clearpage}
+\titleformat{\section}
+	{\bfseries\huge\centering}
+	{}
+	{0pt}
+	{}
+	[\medskip]
+\titleformat{\subsection}
+	{\scshape\LARGE}
+	{}
+	{0pt}
+	{}
+	[\medskip]
+
 \newif\ifsol
+\newif\ifclear
 \makeatletter
 \NewEnviron{problem}[1]
-	{\ifsol\clearpage\fi\stepcounter{problem}
+	{\ifsol\ifclear\clearpage\fi\fi\stepcounter{problem}
 	\Needspace*{2\baselineskip}
 	\noindent
 	{\large\sffamily\textbf{\textcolor{red}{$\blacksquare$} Problem~\theproblem}\hspace{.8em}{\small(#1)}}
